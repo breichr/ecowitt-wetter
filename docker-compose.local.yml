@@ -1,0 +1,5 @@
+# Lokaler Betrieb ohne Reverse-Proxy: App unter http://localhost:3000
+services:
+  app:
+    ports:
+      - '${HOST_PORT:-3000}:3000'

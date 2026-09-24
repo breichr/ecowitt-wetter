@@ -1,0 +1,111 @@
+:root {
+	--bg: #e4e0e1;
+	--fg: #493628;
+	--panel: #dad5d6;
+	--rule: #c8c2c3;
+	--grid: #bbb5b6;
+	--warn-bg: #f0e6d4;
+	--warn-border: #c79a3a;
+	--ok-bg: #dcead9;
+	--ok-border: #4a8f3c;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--bg);
+	color: var(--fg);
+	font-family: monospace;
+	margin: 0;
+	padding: 1em;
+	display: flex;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+a {
+	color: var(--fg);
+}
+
+.content {
+	max-width: 600px;
+	width: 100%;
+}
+
+h2 {
+	margin: 0 0 0.6em;
+	font-size: 1.3em;
+}
+
+h2 .back {
+	float: right;
+	font-size: 0.8em;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.nav {
+	margin-bottom: 1.2em;
+}
+
+.nav a {
+	display: inline-block;
+	padding: 0.35em 0.7em;
+	margin: 0 0.3em 0.3em 0;
+	text-decoration: none;
+	border: 1px solid var(--fg);
+	border-radius: 3px;
+	font-size: 0.9em;
+}
+
+.nav a.active {
+	background: var(--fg);
+	color: var(--bg);
+}
+
+.notice {
+	padding: 0.55em 0.8em;
+	margin-bottom: 1em;
+	border-radius: 2px;
+	font-size: 0.85em;
+	background: var(--warn-bg);
+	border-left: 3px solid var(--warn-border);
+}
+
+.notice.ok {
+	background: var(--ok-bg);
+	border-left-color: var(--ok-border);
+}
+
+.empty {
+	text-align: center;
+	font-size: 0.85em;
+	opacity: 0.6;
+	padding: 3em 0;
+}
+
+table.data {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 0.85em;
+}
+
+table.data th,
+table.data td {
+	padding: 0.35em 0.4em;
+	border-bottom: 1px solid var(--rule);
+	text-align: right;
+}
+
+table.data th {
+	border-bottom: 1px solid var(--fg);
+}
+
+table.data th:first-child,
+table.data td:first-child {
+	text-align: left;
+}
